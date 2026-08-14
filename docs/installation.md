@@ -2,7 +2,7 @@
 
 ## Recommended installer
 
-1. Download `WindowLock-Setup-0.1.0.exe` from the [latest GitHub release](https://github.com/flyingbrick88/window-lock-privacy/releases/latest).
+1. Download `WindowLock-Setup-0.1.1.exe` from the [GitHub releases page](https://github.com/flyingbrick88/window-lock-privacy/releases).
 2. Compare its SHA-256 value with `SHA256SUMS.txt` on the release.
 3. Run the installer. Choose whether Window Lock should start when you sign in and whether to create a desktop shortcut.
 4. Launch Window Lock. It reads status without elevation; Windows asks for administrator approval only after you select **PROTECT** or **UNPROTECT**.

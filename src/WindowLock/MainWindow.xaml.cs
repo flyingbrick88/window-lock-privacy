@@ -13,6 +13,7 @@ namespace WindowLock;
 public partial class MainWindow : Window
 {
     private const string FeedbackUri = "https://github.com/flyingbrick88/window-lock-privacy/issues/new/choose";
+    private const string SupportUri = "https://ko-fi.com/flyingbrick88";
     public event EventHandler? HideRequested;
     public event EventHandler<bool>? StatusChanged;
     private bool _allowExit;
@@ -132,6 +133,11 @@ public partial class MainWindow : Window
     {
         try { Process.Start(new ProcessStartInfo(FeedbackUri) { UseShellExecute = true }); }
         catch (Exception ex) { WpfMessageBox.Show($"Windows could not open the feedback page.\n\n{FeedbackUri}\n\n{ex.Message}", "Send feedback", MessageBoxButton.OK, MessageBoxImage.Warning); }
+    }
+    private void SupportDevelopment_Click(object sender, RoutedEventArgs e)
+    {
+        try { Process.Start(new ProcessStartInfo(SupportUri) { UseShellExecute = true }); }
+        catch (Exception ex) { WpfMessageBox.Show($"Windows could not open the Ko-fi page.\n\n{SupportUri}\n\n{ex.Message}", "Support development", MessageBoxButton.OK, MessageBoxImage.Warning); }
     }
     private static string? GetProtectCommand(ProtectionCheck check) => check.Title switch
     {

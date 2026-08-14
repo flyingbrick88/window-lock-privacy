@@ -40,10 +40,11 @@ var projectRoot = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", 
 var mainXaml = File.ReadAllText(Path.Combine(projectRoot, "src", "WindowLock", "MainWindow.xaml"));
 var mainCode = File.ReadAllText(Path.Combine(projectRoot, "src", "WindowLock", "MainWindow.xaml.cs"));
 var infoXaml = File.ReadAllText(Path.Combine(projectRoot, "src", "WindowLock", "ProtectionInfoWindow.xaml"));
-foreach (var expected in new[] { "Recent installations", "Send feedback", "Update protection status", "Hide unavailable options", "ABOUT &amp; PRIVACY", "Built by flyingbrick88", "Created August 2026", "Licence: free noncommercial use", "No account required", "No user identity or installed-app inventory is saved", "Window Lock sends no data" })
+foreach (var expected in new[] { "Recent installations", "Support development on Ko-fi", "Send feedback", "Update protection status", "Hide unavailable options", "ABOUT &amp; PRIVACY", "Built by flyingbrick88", "Created August 2026", "Licence: free noncommercial use", "No account required", "Compatibility: Windows 10 version 1809 or later and Windows 11 · x64", "No user identity or installed-app inventory is saved", "Window Lock sends no data" })
     Assert(mainXaml.Contains(expected, StringComparison.Ordinal), $"main interface contains {expected}");
 Assert(mainCode.Contains("More information", StringComparison.Ordinal), "each generated posture card includes More information");
 Assert(mainCode.Contains("https://github.com/flyingbrick88/window-lock-privacy/issues/new/choose", StringComparison.Ordinal), "feedback button opens the repository issue chooser");
+Assert(mainCode.Contains("https://ko-fi.com/flyingbrick88", StringComparison.Ordinal), "support button opens the creator's Ko-fi page");
 Assert(mainCode.Contains("Content = \"PROTECT\"", StringComparison.Ordinal), "actionable unprotected cards provide a per-field protect action");
 Assert(mainCode.Contains("Content = \"UNPROTECT\"", StringComparison.Ordinal), "owned protected cards provide the requested per-field unprotect action");
 Assert(!mainCode.Contains("Text = check.Evidence", StringComparison.Ordinal), "raw registry evidence is not shown on card summaries");

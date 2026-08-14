@@ -1,0 +1,9 @@
+PRIVACY FIRST
+
+Window Lock has no account, analytics, advertising, telemetry, cloud sync, or remote reporting. It sends no user, application, device, or diagnostic information anywhere.
+
+NO FRAMEWORK DOWNLOAD REQUIRED
+
+This installer contains the required .NET desktop runtime. It will not download or install a separate framework or other dependency. After reviewing this information, you choose whether to continue with installation.
+
+Windows asks separately for administrator approval only if you later select PROTECT or UNPROTECT inside Window Lock.

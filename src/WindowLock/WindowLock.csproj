@@ -10,7 +10,7 @@
     <RootNamespace>WindowLock</RootNamespace>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon>Assets\window-lock.ico</ApplicationIcon>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Company>flyingbrick88</Company>
     <Product>Window Lock</Product>
     <Description>Checks and controls Windows device-associated application policy.</Description>

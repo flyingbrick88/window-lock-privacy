@@ -1,5 +1,5 @@
 #define AppName "Window Lock"
-#define AppVersion "0.1.0"
+#define AppVersion "0.1.1"
 #define AppPublisher "flyingbrick88"
 #define RepoUrl "https://github.com/flyingbrick88/window-lock-privacy"
 
@@ -20,6 +20,7 @@ OutputBaseFilename=WindowLock-Setup-{#AppVersion}
 SetupIconFile=..\src\WindowLock\Assets\window-lock.ico
 UninstallDisplayIcon={app}\WindowLock.exe
 LicenseFile=..\LICENSE
+InfoBeforeFile=privacy-first.txt
 InfoAfterFile=post-install.txt
 WizardStyle=modern
 Compression=lzma2/ultra64

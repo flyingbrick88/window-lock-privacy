@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 — 2026-08-14
+
+- Added an optional **Support development** button linking to flyingbrick88's Ko-fi page.
+- Added matching support links to the project website and README.
+- Clarified that opening Ko-fi is voluntary and that Window Lock submits no information automatically.
+
 ## 0.1.0 — 2026-08-14
 
 - Added six plain-language Windows protection checks.

@@ -1,17 +1,26 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Window Lock gives Windows 10 and 11 users clear privacy and update policy controls.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Window Lock gives Windows 10 and 11 users clear privacy and update controls.">
   <title>Window Lock — Windows privacy &amp; update control</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header><nav><a class="brand" href="./">Window Lock</a><a href="#controls">Controls</a><a href="privacy.html">Privacy</a><a href="license.html">Licence</a><a href="https://github.com/flyingbrick88/window-lock-privacy">GitHub</a></nav></header>
+  <header><nav><a class="brand" href="./">Window Lock</a><a href="privacy.html">Privacy</a><a href="license.html">Licence</a><a href="https://github.com/flyingbrick88/window-lock-privacy">GitHub</a></nav></header>
   <main>
-    <section class="hero"><img src="https://raw.githubusercontent.com/flyingbrick88/window-lock-privacy/main/docs/images/window-lock-gui-preview.png" alt="Window Lock 0.1.0 showing protected cards and privacy controls"><div><p class="eyebrow">WINDOWS 10 &amp; 11</p><h1>You decide what gets installed.</h1><p>Clear controls for manufacturer companion apps, driver updates, Windows Update downloads, and Microsoft Store app updates.</p><div class="actions"><a class="primary" href="https://github.com/flyingbrick88/window-lock-privacy/releases/latest">Download for Windows</a><a class="secondary" href="https://github.com/flyingbrick88/window-lock-privacy/issues/new/choose">Send feedback</a></div><p class="small">Free for noncommercial use. No accounts, analytics, advertising, or telemetry.</p></div></section>
-    <section id="controls"><h2>Understand every setting</h2><div class="cards"><article><b class="protected">PROTECTED</b><h3>Plain-language status</h3><p>Cards explain what each state means and link to Microsoft documentation.</p></article><article><b class="unprotected">UNPROTECTED</b><h3>One field at a time</h3><p>PROTECT and UNPROTECT act only on the selected policy and verify the result.</p></article><article><b class="neutral">LOCAL &amp; PRIVATE</b><h3>No remote reporting</h3><p>Status and recent-installation results stay on the PC. Feedback opens GitHub only when selected.</p></article></div></section>
-    <section class="notice"><h2>Important limitation</h2><p>Windows has no universal third-party “ask before every install” switch. Window Lock controls the supported policies it reports; it cannot intercept every installer, initial Plug and Play driver, script, package manager, enterprise-management action, or Windows servicing path.</p></section>
+    <section class="notice privacy-first">
+      <p class="eyebrow">PRIVACY FIRST</p>
+      <h1>Your information stays on your PC.</h1>
+      <p>Window Lock has no account, analytics, advertising, telemetry, cloud sync, or remote reporting. It sends no user, app, device, or diagnostic information anywhere.</p>
+      <a href="privacy.html">Read the short privacy statement</a>
+    </section>
+    <section class="hero">
+      <img src="https://raw.githubusercontent.com/flyingbrick88/window-lock-privacy/main/docs/images/window-lock-gui-preview.png" alt="Window Lock showing protected cards and privacy controls">
+      <div><p class="eyebrow">WINDOWS 10 &amp; 11 · X64</p><h2>You decide what gets installed.</h2><p>Control selected Windows policies for device companion apps, driver updates, Windows Update downloads, and Store app updates.</p><div class="actions"><a class="primary" href="https://github.com/flyingbrick88/window-lock-privacy/releases">Download installer</a><a class="secondary" href="https://ko-fi.com/flyingbrick88">Support on Ko-fi</a><a class="secondary" href="https://github.com/flyingbrick88/window-lock-privacy/issues/new/choose">Feedback</a></div><p class="small">Windows 10 version 1809 or later and Windows 11. The installer includes the required runtime; no framework download is needed.</p></div>
+    </section>
+    <section class="notice"><h2>Know the limit</h2><p>Window Lock controls the supported policies it reports. Windows has no universal third-party switch that can ask before every installer, initial device driver, script, package, or servicing operation.</p></section>
   </main>
-  <footer>© 2026 flyingbrick88 · <a href="privacy.html">Privacy</a> · <a href="license.html">PolyForm Noncommercial 1.0.0</a></footer>
+  <footer>© 2026 flyingbrick88 · Free for qualifying noncommercial use</footer>
 </body></html>

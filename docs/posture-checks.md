@@ -1,6 +1,6 @@
 # Startup posture checks
 
-| Check | Protected state | Action in 0.1.0 |
+| Check | Protected state | Action in 0.1.x |
 | --- | --- | --- |
 | Device-associated app downloads | Network device metadata retrieval blocked | Per-card PROTECT/UNPROTECT on supported editions |
 | Device Installation Settings fallback | Metadata retrieval preference disabled | Read-only; unavailable when machine policy overrides it |

@@ -6,11 +6,11 @@
 
 Window Lock is a Windows 10 and 11 desktop app that makes selected built-in privacy and update policies clear and easy to control. Its main purpose is to reduce optional manufacturer companion apps, promotional utilities, and telemetry software appearing simply because hardware such as a display, printer, or USB device was connected.
 
-![Window Lock 0.1.0 interface](docs/images/window-lock-gui-preview.png)
+![Window Lock 0.1.1 interface](docs/images/window-lock-gui-preview.png)
 
 ## Download
 
-Download `WindowLock-Setup-0.1.0.exe` from the [latest release](https://github.com/flyingbrick88/window-lock-privacy/releases/latest). The installer is self-contained and installs only for the current Windows account. See [installation guidance](docs/installation.md), including checksum verification and the unsigned-app warning.
+Download `WindowLock-Setup-0.1.1.exe` from the [GitHub releases page](https://github.com/flyingbrick88/window-lock-privacy/releases). The installer is self-contained and installs only for the current Windows account. See [installation guidance](docs/installation.md), including checksum verification and the unsigned-app warning.
 
 ## What it checks
 
@@ -52,6 +52,8 @@ The GitHub Actions workflow repeats the build, test, publish, and installer comp
 ## Feedback and security
 
 Use the app's **Send feedback** button or [GitHub Issues](https://github.com/flyingbrick88/window-lock-privacy/issues/new/choose). Please report vulnerabilities privately as described in [SECURITY.md](SECURITY.md).
+
+Development is funded voluntarily through [Ko-fi](https://ko-fi.com/flyingbrick88). Support is optional and never affects app features, privacy, or access.
 
 ## Licence
 

@@ -33,7 +33,7 @@ Window Lock must prefer supported policy locations over undocumented service dis
 
 ### Remediation engine
 
-The current build confirms the selected field and launches the same application binary in a narrow command mode through UAC. It refuses to overwrite an explicitly configured unowned value, records ownership and backup metadata, applies one policy, reads it back, and offers guarded restoration. Version 0.1.0 is not code signed; a signed executable and separately signed privileged helper remain future hardening work.
+The current build confirms the selected field and launches the same application binary in a narrow command mode through UAC. It refuses to overwrite an explicitly configured unowned value, records ownership and backup metadata, applies one policy, reads it back, and offers guarded restoration. Current beta builds are not code signed; a signed executable and separately signed privileged helper remain future hardening work.
 
 ## Future per-item approval sequence
 
