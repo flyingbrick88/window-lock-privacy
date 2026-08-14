@@ -2,15 +2,15 @@
 
 [![Build and test](https://github.com/flyingbrick88/window-lock-privacy/actions/workflows/build.yml/badge.svg)](https://github.com/flyingbrick88/window-lock-privacy/actions/workflows/build.yml)
 [![Documentation](https://img.shields.io/badge/docs-GitHub%20Pages-087F5B)](https://flyingbrick88.github.io/window-lock-privacy/)
-[![Licence: PolyForm Noncommercial](https://img.shields.io/badge/licence-PolyForm%20Noncommercial-blue)](LICENSE)
+[![Licence: GPL v3](https://img.shields.io/badge/licence-GPLv3-blue)](LICENSE)
 
 Window Lock is a Windows 10 and 11 desktop app that makes selected built-in privacy and update policies clear and easy to control. Its main purpose is to reduce optional manufacturer companion apps, promotional utilities, and telemetry software appearing simply because hardware such as a display, printer, or USB device was connected.
 
-![Window Lock 0.1.1 interface](docs/images/window-lock-gui-preview.png)
+![Window Lock 0.2.0 interface](docs/images/window-lock-gui-preview.png)
 
 ## Download
 
-Download `WindowLock-Setup-0.1.1.exe` from the [GitHub releases page](https://github.com/flyingbrick88/window-lock-privacy/releases). The installer is self-contained and installs only for the current Windows account. See [installation guidance](docs/installation.md), including checksum verification and the unsigned-app warning.
+Download `WindowLock-Setup-0.2.0.exe` from the [GitHub releases page](https://github.com/flyingbrick88/window-lock-privacy/releases). The installer is self-contained and installs only for the current Windows account. See [installation guidance](docs/installation.md), including checksum verification and the unsigned-app warning.
 
 ## What it checks
 
@@ -49,6 +49,8 @@ dotnet publish .\src\WindowLock\WindowLock.csproj --configuration Release --prop
 
 The GitHub Actions workflow repeats the build, test, publish, and installer compilation on a clean Windows runner.
 
+Release builds also generate an SPDX software bill of materials and SHA-256 checksums. See the public [code-signing policy](CODE_SIGNING_POLICY.md), [SignPath readiness gate](docs/signpath-readiness.md), and [licensing history](docs/licensing-history.md).
+
 ## Feedback and security
 
 Use the app's **Send feedback** button or [GitHub Issues](https://github.com/flyingbrick88/window-lock-privacy/issues/new/choose). Please report vulnerabilities privately as described in [SECURITY.md](SECURITY.md).
@@ -57,4 +59,4 @@ Development is funded voluntarily through [Ko-fi](https://ko-fi.com/flyingbrick8
 
 ## Licence
 
-Copyright © 2026 flyingbrick88. Window Lock is free for personal and other qualifying noncommercial use under the [PolyForm Noncommercial License 1.0.0](LICENSE). Commercial use or sale is not permitted without separate permission. This is a source-available licence, not an OSI-approved open-source licence. Third-party runtime and installer notices are listed separately in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+Copyright © 2026 flyingbrick88. Current Window Lock source and version 0.2.0 onward are free and open-source software under the [GNU General Public License version 3 only](LICENSE), identified as `GPL-3.0-only`. The GPL permits use, study, modification, redistribution, and commercial activity, provided its terms are followed; distributors must preserve the licence and provide the corresponding source when required. There is no warranty. Versions 0.1.0 and 0.1.1 remain under the licence shipped with those releases; see [licensing history](docs/licensing-history.md). Third-party notices are listed separately in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).

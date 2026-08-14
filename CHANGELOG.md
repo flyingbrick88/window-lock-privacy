@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 — 2026-08-14
+
+- Relicensed current source and future releases under GNU GPL version 3 only.
+- Added a public code-signing policy, maintainer roles, build provenance requirements, and a SignPath application checklist.
+- Pinned GitHub Actions and Inno Setup build inputs and added workflow-generated SHA-256 checksums.
+- Updated in-app, installer, website, contribution, security, and release documentation for the new licence and signing path.
+- Preserved the original licence terms and release notes for versions 0.1.0 and 0.1.1.
+
 ## 0.1.1 — 2026-08-14
 
 - Added an optional **Support development** button linking to flyingbrick88's Ko-fi page.

@@ -11,4 +11,4 @@ Contributions must preserve these rules:
 - add plain-language UI guidance and automated coverage
 - add no telemetry, advertising, analytics, or remote reporting
 
-Run the Release build and test program documented in [README.md](README.md). By submitting a contribution, you agree that it may be distributed with this project under PolyForm Noncommercial 1.0.0. Do not submit code you cannot license on those terms.
+Run the Release build and test program documented in [README.md](README.md). By submitting a contribution, you agree that it may be distributed with this project under `GPL-3.0-only`. Do not submit code you cannot license on those terms. Contributors retain copyright in their contributions; no contributor licence agreement or commercial dual-licensing grant is requested.

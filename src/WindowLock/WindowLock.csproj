@@ -10,12 +10,14 @@
     <RootNamespace>WindowLock</RootNamespace>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon>Assets\window-lock.ico</ApplicationIcon>
-    <Version>0.1.1</Version>
+    <Version>0.2.0</Version>
+    <InformationalVersion>0.2.0</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <Company>flyingbrick88</Company>
     <Product>Window Lock</Product>
     <Description>Checks and controls Windows device-associated application policy.</Description>
     <Copyright>Copyright © 2026 flyingbrick88</Copyright>
-    <PackageLicenseExpression>PolyForm-Noncommercial-1.0.0</PackageLicenseExpression>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/flyingbrick88/window-lock-privacy</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
