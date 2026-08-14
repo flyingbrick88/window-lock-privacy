@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
-      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
         with:
           global-json-file: global.json
       - name: Verify release metadata
@@ -34,7 +34,7 @@ jobs:
       - name: Build installer
         run: '& "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe" installer\WindowLock.iss'
       - name: Set up .NET 8 for the pinned SBOM tool
-        uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
+        uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
         with:
           dotnet-version: 8.0.424
       - name: Generate SPDX SBOM
