@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/WindowLock/WindowLock.csproj" />
+  <Project Path="tests/WindowLock.Tests/WindowLock.Tests.csproj" />
+</Solution>

@@ -1,0 +1,5 @@
+Window Lock has been installed for this Windows account.
+
+The application is not code signed, so Windows SmartScreen may show an “unknown publisher” warning. Verify the SHA-256 checksum published with the GitHub release before continuing if you downloaded the installer from elsewhere.
+
+Window Lock changes a setting only after you select PROTECT and approve the Windows administrator prompt. Uninstalling the application does not reverse Windows policies; use each available UNPROTECT button first if you want Window Lock to restore settings it owns.

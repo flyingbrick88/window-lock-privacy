@@ -1,0 +1,39 @@
+name: Build and test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - name: Restore
+        run: dotnet restore WindowLock.slnx
+      - name: Build
+        run: dotnet build WindowLock.slnx --configuration Release --no-restore
+      - name: Test
+        run: dotnet run --project tests/WindowLock.Tests/WindowLock.Tests.csproj --configuration Release --no-build
+      - name: Publish portable executable
+        run: dotnet publish src/WindowLock/WindowLock.csproj --configuration Release --property:PublishProfile=win-x64 --output dist/win-x64
+      - name: Install Inno Setup
+        run: choco install innosetup --no-progress --yes
+      - name: Build installer
+        run: '& "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe" installer\WindowLock.iss'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WindowLock-0.1.0
+          path: |
+            dist/win-x64/WindowLock.exe
+            dist/installer/WindowLock-Setup-0.1.0.exe
+            LICENSE
+            PRIVACY.md

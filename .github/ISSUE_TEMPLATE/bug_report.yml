@@ -1,0 +1,42 @@
+name: Bug report
+description: Report incorrect status, a failed action, or another reproducible problem.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Please remove personal details, serial numbers, product keys, and account information before submitting.
+  - type: input
+    id: version
+    attributes:
+      label: Window Lock version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version and edition
+      description: Copy the Windows information shown near the top of Window Lock.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the affected card, expected result, actual result, and exact message shown.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed passwords, keys, serial numbers, and other personal information.
+          required: true
