@@ -30,7 +30,7 @@ Publication was explicitly authorized on 14 August 2026. This checklist records 
 - [ ] Test Windows 10/11 Home and Pro in disposable virtual machines
 - [x] Add executable icon and user-friendly Inno Setup packaging
 - [x] Add PolyForm Noncommercial 1.0.0 and accurately describe it as source-available, not OSI open source
-- [ ] Configure private vulnerability reporting after repository creation
+- [x] Configure private vulnerability reporting
 - [ ] Code-sign production executables and installer
-- [ ] Create reviewed local commit
-- [ ] Create GitHub repository and push after all local release checks pass
+- [x] Create reviewed local commit using the flyingbrick88 noreply identity
+- [x] Create the public GitHub repository and push after all local release checks pass

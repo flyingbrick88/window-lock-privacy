@@ -5,7 +5,6 @@ Window Lock makes selected built-in Windows privacy and update policies easier t
 ## Download
 
 - `WindowLock-Setup-0.1.0.exe` — recommended per-user installer
-- `WindowLock.exe` — portable self-contained x64 executable
 - `SHA256SUMS.txt` — SHA-256 verification values
 
 ## Read before installing
