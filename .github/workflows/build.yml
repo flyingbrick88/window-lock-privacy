@@ -3,6 +3,7 @@ name: Build and test
 on:
   push:
     branches: [main]
+    tags: ['v*']
   pull_request:
   workflow_dispatch:
 
@@ -13,10 +14,13 @@ jobs:
   windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
         with:
-          dotnet-version: 10.0.x
+          global-json-file: global.json
+      - name: Verify release metadata
+        shell: powershell
+        run: powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -File .\scripts\Verify-ReleaseMetadata.ps1
       - name: Restore
         run: dotnet restore WindowLock.slnx
       - name: Build
@@ -26,14 +30,52 @@ jobs:
       - name: Publish portable executable
         run: dotnet publish src/WindowLock/WindowLock.csproj --configuration Release --property:PublishProfile=win-x64 --output dist/win-x64
       - name: Install Inno Setup
-        run: choco install innosetup --no-progress --yes
+        run: choco install innosetup --version=6.7.1 --no-progress --yes
       - name: Build installer
         run: '& "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe" installer\WindowLock.iss'
-      - uses: actions/upload-artifact@v4
+      - name: Set up .NET 8 for the pinned SBOM tool
+        uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
         with:
-          name: WindowLock-0.1.1
+          dotnet-version: 8.0.424
+      - name: Generate SPDX SBOM
+        shell: pwsh
+        run: |
+          dotnet tool install --global Microsoft.Sbom.DotNetTool --version 4.1.5
+          New-Item -ItemType Directory -Force -Path dist/sbom | Out-Null
+          sbom-tool generate `
+            -b dist/win-x64 `
+            -bc src/WindowLock `
+            -m dist/sbom `
+            -pn WindowLock `
+            -pv 0.2.0 `
+            -ps flyingbrick88 `
+            -nsb https://github.com/flyingbrick88/window-lock-privacy
+          sbom-tool validate `
+            -b dist/win-x64 `
+            -o dist/sbom-validation.json `
+            -mi SPDX:2.2 `
+            -m dist/sbom/_manifest
+      - name: Create checksums
+        shell: pwsh
+        run: |
+          $files = @(
+            'dist/win-x64/WindowLock.exe'
+            'dist/installer/WindowLock-Setup-0.2.0.exe'
+            'dist/sbom/_manifest/spdx_2.2/manifest.spdx.json'
+          )
+          $lines = foreach ($file in $files) {
+            $hash = (Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash.ToLowerInvariant()
+            "$hash  $(Split-Path -Leaf $file)"
+          }
+          $lines | Set-Content -LiteralPath dist/SHA256SUMS.txt -Encoding utf8
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: WindowLock-0.2.0
           path: |
             dist/win-x64/WindowLock.exe
-            dist/installer/WindowLock-Setup-0.1.1.exe
+            dist/installer/WindowLock-Setup-0.2.0.exe
+            dist/sbom/_manifest/spdx_2.2/manifest.spdx.json
+            dist/sbom-validation.json
+            dist/SHA256SUMS.txt
             LICENSE
             PRIVACY.md

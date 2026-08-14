@@ -29,8 +29,12 @@ Publication was explicitly authorized on 14 August 2026. This checklist records 
 - [ ] Complete elevated apply/restore integration test with locally approved UAC
 - [ ] Test Windows 10/11 Home and Pro in disposable virtual machines
 - [x] Add executable icon and user-friendly Inno Setup packaging
-- [x] Add PolyForm Noncommercial 1.0.0 and accurately describe it as source-available, not OSI open source
+- [x] Record the original PolyForm Noncommercial terms for historical 0.1.x releases
+- [x] Relicense current source and version 0.2.0 onward as `GPL-3.0-only`
+- [x] Add public code-signing policy, maintainer roles, provenance rules, and SignPath readiness checklist
+- [x] Pin GitHub Actions and Inno Setup versions and generate release checksums in CI
 - [x] Configure private vulnerability reporting
-- [ ] Code-sign production executables and installer
+- [ ] Obtain SignPath Foundation approval and code-sign production executables and installer
 - [x] Create reviewed local commit using the flyingbrick88 noreply identity
+- [x] Verify public files, media metadata, commits, repository details, and release text expose only the `flyingbrick88` handle
 - [x] Create the public GitHub repository and push after all local release checks pass
